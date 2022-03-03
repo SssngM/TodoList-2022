@@ -61,8 +61,8 @@ function TodoList(){
         return (
           <div>
              <div className = 'TodoList'>
-             <h1 className ='Title'> {user}'s TodoList</h1>
-             <NewTodoForm 
+             <h1 className ='Title'> {user}'s todolist</h1>
+             < NewTodoForm 
              createTodo={createTodo} 
              user={user}
              />

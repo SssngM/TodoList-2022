@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import EditInputForm from './EditInputForm';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {AiFillEdit,AiFillDelete} from "react-icons/ai";
 
-function Todo({ todo, deleteItem, updateItem }){ ;
+
+function Todo({ todo, deleteItem, updateItem }) {
+  ;
   const [showEdit, setShowEdit] = useState(false);
 
   const handleDeleteItem = () => {
@@ -13,26 +17,29 @@ function Todo({ todo, deleteItem, updateItem }){ ;
   }
 
 
-  let result 
-  if (showEdit) { 
+  let result
+  if (showEdit) {
     result = (
-      <div clasName = 'todo'>
-        <EditInputForm 
-                  id={todo.id}
-                  text={todo.text}
-                  setShowEdit={setShowEdit}
-                  updateItem={updateItem} />
+      <div clasName='todo'>
+
+        <EditInputForm
+          id={todo.id}
+          text={todo.text}
+          setShowEdit={setShowEdit}
+          updateItem={updateItem} />
       </div>
     )
   } else {
     result = (
-      <div className = "todoButtons">
-        { todo.text }
-        <button onClick={toggleShowEdit}><i class="fas fa-pen"></i></button>
-        <button onClick={handleDeleteItem}> <i class="fas fa-trash"></i> </button>
+      <div className="todoButtons">
+        <p className="todotext"> {todo.text}   </p>
+        <div className=" buttonDiv" >
+        <button onClick={toggleShowEdit}> <AiFillEdit/></button> 
+        <button onClick={handleDeleteItem}><AiFillDelete/> </button>
+        </div>
       </div>
     )
-   }
+  }
   return result;
 }
 

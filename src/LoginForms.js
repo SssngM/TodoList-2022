@@ -39,7 +39,7 @@ const LoginForms = (props) => {
             <div className='input'>
                 <input
                     id="user"
-                    type="text"
+                    // type="text"
                     name="user"
                     placeholder="user"
                     value={formData.user}
@@ -49,7 +49,7 @@ const LoginForms = (props) => {
             <div className='input'>
                 <input
                     id="password"
-                    type="password"
+                    // type="password"
                     name="password"
                     placeholder="password"
                     value={formData.password}
